@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truyền File An Toàn</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/app.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center text-blue-600 mb-4">Truyền File An Toàn</h1>
+        <div id="login-section" class="mb-4">
+            <input type="text" id="username" placeholder="Nhập tên người dùng" class="w-full p-2 border rounded mb-2">
+            <button onclick="login()" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Đăng nhập</button>
+        </div>
+        <div id="main-section" class="hidden">
+            <p class="mb-2">Trạng thái: <span id="status" class="font-semibold">Chưa kết nối</span></p>
+            <p class="mb-4">Người dùng trực tuyến: <span id="users" class="font-semibold">Không có</span></p>
+            <div class="mb-4">
+                <label for="recipient" class="block text-sm font-medium">Người nhận:</label>
+                <select id="recipient" class="w-full p-2 border rounded">
+                    <option value="">Chọn người dùng</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <input type="file" id="fileInput" class="w-full p-2 border rounded">
+                <button onclick="sendFile()" class="w-full bg-green-500 text-white p-2 rounded mt-2 hover:bg-green-600">Gửi File</button>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-2">File đã nhận:</h3>
+                <ul id="received-files" class="space-y-2"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
