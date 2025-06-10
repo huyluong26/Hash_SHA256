@@ -11,5 +11,7 @@
 <div align="center">
     <p align="center">
         <img src="Screenshot 2025-06-10 172819.png" alt="AIoTLab Logo" width="680"/>
+        <img src="Screenshot 2025-06-10 172923.png" alt="AIoTLab Logo" width="680"/>
+        
     </p>
 </div>
